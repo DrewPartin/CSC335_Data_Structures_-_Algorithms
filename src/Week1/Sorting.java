@@ -46,10 +46,10 @@ public class Sorting {
         // Recursive Case
         else {
             int pivot = array[(low + high) / 2];
-//            System.out.println("pivot: " + pivot);
+            System.out.println("pivot: " + pivot);
             int index = partition(array, low, high, pivot);
-//            System.out.println("index: " + index);
-//            System.out.println("array: " + Arrays.toString(array));
+            System.out.println("index: " + index);
+            System.out.println("array: " + Arrays.toString(array));
             quickSort(array, low, index - 1);
             quickSort(array, index, high);
         }
@@ -90,8 +90,8 @@ public class Sorting {
             mergeSort(array, low, mid);
             mergeSort(array, mid + 1, high);
             merge(array, low, mid, high);
-//            System.out.println("low: " + low + ", high: " + high + ", mid: " + mid);
-//            System.out.println("array: " + Arrays.toString(array));
+            System.out.println("low: " + low + ", high: " + high + ", mid: " + mid);
+            System.out.println("array: " + Arrays.toString(array));
         }
     }
 
@@ -212,62 +212,62 @@ public class Sorting {
                     j--;
                 }
                 array[j + 1] = temp;
-//                System.out.println("i: " + i + ", j: " + j);
-//                System.out.println("array: " + Arrays.toString(array));
+                System.out.println("i: " + i + ", j: " + j);
+                System.out.println("array: " + Arrays.toString(array));
             }
         }
     }
 
     public static void main(String[] args) {
-//        int[] array = {8, 4, 6, 2, 7};
-//        int f = 3;
-//
-//        System.out.println("\nThe sum of the first " + f + " numbers in the array " + Arrays.toString(array) + " is: " + sumOfFirstNIntegers(array, f) + "\n");
-//
-//        int[] array2 = {6, 12, 17, 23, 38, 45, 77, 84, 90};
-//        int key = 90;
-//        int low = 0;
-//        int high = array2.length - 1;
-//
-//        System.out.println("\nThe index of the key " + key + " in the array " + Arrays.toString(array2) + " is: " + binarySearch(array2, key, low, high) + "\n");
-//
-//        int[] array3 = new int[5000];
-//        for (int i = 0; i < array3.length; i++) {
-//            array3[i] = i;
-//        }
-//        int key2 = 5001;
-//        int low2 = 0;
-//        int high2 = array3.length - 1;
-//
-//        System.out.println("\nThe index of the key " + key2 + " in the array " + Arrays.toString(array3) + " is: " + binarySearch(array3, key2, low2, high2) + "\n");
-//
-//        int[] array4 = {36, 41, 27, 12, 31, 17, 5};
-//        int low3 = 0;
-//        int high3 = array4.length - 1;
-//
-//        System.out.println("\nQuick Sort on array " + Arrays.toString(array4) + " :\n");
-//        quickSort(array4, low3, high3);
-//        System.out.println("\nQuick Sort complete!\n");
-//
-//        int[] array5 = {36, 14, 27, 12, 31, 17, 5};
-//        int low4 = 0;
-//        int high4 = array5.length - 1;
-//
-//        System.out.println("\nMerge Sort on array " + Arrays.toString(array5) + ":\n");
-//        mergeSort(array5, low4, high4);
-//        System.out.println("\nMerge Sort complete!\n");
-//
-//        int[] array6 = {36, 14, 27, 12, 31, 17, 5};
-//
-//        System.out.println("\nRadix Sort on array " + Arrays.toString(array6) + ":\n");
-//        radixSort(array6);
-//        System.out.println("\nRadix Sort complete!\n");
-//
-//        int[] array7 = {36, 14, 27, 12, 31, 17, 5};
-//
-//        System.out.println("\nShell Sort on array " + Arrays.toString(array7) + ":\n");
-//        shellSort(array7);
-//        System.out.println("\nShell Sort complete!\n");
+        int[] array = {8, 4, 6, 2, 7};
+        int f = 3;
+
+        System.out.println("\nThe sum of the first " + f + " numbers in the array " + Arrays.toString(array) + " is: " + sumOfFirstNIntegers(array, f) + "\n");
+
+        int[] array2 = {6, 12, 17, 23, 38, 45, 77, 84, 90};
+        int key = 90;
+        int low = 0;
+        int high = array2.length - 1;
+
+        System.out.println("\nThe index of the key " + key + " in the array " + Arrays.toString(array2) + " is: " + binarySearch(array2, key, low, high) + "\n");
+
+        int[] array3 = new int[5000];
+        for (int i = 0; i < array3.length; i++) {
+            array3[i] = i;
+        }
+        int key2 = 5001;
+        int low2 = 0;
+        int high2 = array3.length - 1;
+
+        System.out.println("\nThe index of the key " + key2 + " in the array " + Arrays.toString(array3) + " is: " + binarySearch(array3, key2, low2, high2) + "\n");
+
+        int[] array4 = {36, 41, 27, 12, 31, 17, 5};
+        int low3 = 0;
+        int high3 = array4.length - 1;
+
+        System.out.println("\nQuick Sort on array " + Arrays.toString(array4) + " :\n");
+        quickSort(array4, low3, high3);
+        System.out.println("\nQuick Sort complete!\n");
+
+        int[] array5 = {36, 14, 27, 12, 31, 17, 5};
+        int low4 = 0;
+        int high4 = array5.length - 1;
+
+        System.out.println("\nMerge Sort on array " + Arrays.toString(array5) + ":\n");
+        mergeSort(array5, low4, high4);
+        System.out.println("\nMerge Sort complete!\n");
+
+        int[] array6 = {36, 14, 27, 12, 31, 17, 5};
+
+        System.out.println("\nRadix Sort on array " + Arrays.toString(array6) + ":\n");
+        radixSort(array6);
+        System.out.println("\nRadix Sort complete!\n");
+
+        int[] array7 = {36, 14, 27, 12, 31, 17, 5};
+
+        System.out.println("\nShell Sort on array " + Arrays.toString(array7) + ":\n");
+        shellSort(array7);
+        System.out.println("\nShell Sort complete!\n");
 
         // compare runtime of insertion sort, merge sort, and quick sort
 
