@@ -219,288 +219,288 @@ public class Sorting {
     }
 
     public static void main(String[] args) {
-        int[] array = {8, 4, 6, 2, 7};
-        int f = 3;
+//        int[] array = {8, 4, 6, 2, 7};
+//        int f = 3;
+//
+//        System.out.println("\nThe sum of the first " + f + " numbers in the array " + Arrays.toString(array) + " is: " + sumOfFirstNIntegers(array, f) + "\n");
 
-        System.out.println("\nThe sum of the first " + f + " numbers in the array " + Arrays.toString(array) + " is: " + sumOfFirstNIntegers(array, f) + "\n");
-
-        int[] array2 = {6, 12, 17, 23, 38, 45, 77, 84, 90};
-        int key = 90;
+        int[] array2 = {4, 11, 17, 18, 25, 45, 63, 77, 89, 100, 114};
+        int key = 4;
         int low = 0;
         int high = array2.length - 1;
 
         System.out.println("\nThe index of the key " + key + " in the array " + Arrays.toString(array2) + " is: " + binarySearch(array2, key, low, high) + "\n");
-
-        int[] array3 = new int[5000];
-        for (int i = 0; i < array3.length; i++) {
-            array3[i] = i;
-        }
-        int key2 = 5001;
-        int low2 = 0;
-        int high2 = array3.length - 1;
-
-        System.out.println("\nThe index of the key " + key2 + " in the array " + Arrays.toString(array3) + " is: " + binarySearch(array3, key2, low2, high2) + "\n");
-
-        int[] array4 = {36, 41, 27, 12, 31, 17, 5};
-        int low3 = 0;
-        int high3 = array4.length - 1;
-
-        System.out.println("\nQuick Sort on array " + Arrays.toString(array4) + " :\n");
-        quickSort(array4, low3, high3);
-        System.out.println("\nQuick Sort complete!\n");
-
-        int[] array5 = {36, 14, 27, 12, 31, 17, 5};
-        int low4 = 0;
-        int high4 = array5.length - 1;
-
-        System.out.println("\nMerge Sort on array " + Arrays.toString(array5) + ":\n");
-        mergeSort(array5, low4, high4);
-        System.out.println("\nMerge Sort complete!\n");
-
-        int[] array6 = {36, 14, 27, 12, 31, 17, 5};
-
-        System.out.println("\nRadix Sort on array " + Arrays.toString(array6) + ":\n");
-        radixSort(array6);
-        System.out.println("\nRadix Sort complete!\n");
-
-        int[] array7 = {36, 14, 27, 12, 31, 17, 5};
-
-        System.out.println("\nShell Sort on array " + Arrays.toString(array7) + ":\n");
-        shellSort(array7);
-        System.out.println("\nShell Sort complete!\n");
-
-        // compare runtime of insertion sort, merge sort, and quick sort
-
-        // array of 1,000 elements
-        int[] array = new int[1000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        int[] array2 = new int[1000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        int[] array3 = new int[1000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("\nArray of 1,000 elements:");
-
-        long startTime = System.nanoTime();
-        insertionSort(array);
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 10,000 elements
-        array = new int[10000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[10000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[10000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 10,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 50,000 elements
-        array = new int[50000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[50000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[50000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 50,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 100,000 elements
-        array = new int[100000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[100000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[100000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 100,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 150,000 elements
-        array = new int[150000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[150000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[150000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 150,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 200,000 elements
-        array = new int[200000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[200000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[200000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 200,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 250,000 elements
-        array = new int[250000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[250000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[250000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 250,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
-
-        // array of 300,000 elements
-        array = new int[300000];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 1000);
-        }
-        array2 = new int[300000];
-        System.arraycopy(array, 0, array2, 0, array.length);
-        array3 = new int[300000];
-        System.arraycopy(array, 0, array3, 0, array.length);
-        System.out.println("Array of 300,000 elements:");
-
-        startTime = System.nanoTime();
-        insertionSort(array);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        mergeSort(array2, 0, array2.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
-
-        startTime = System.nanoTime();
-        quickSort(array3, 0, array3.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        int[] array3 = new int[5000];
+//        for (int i = 0; i < array3.length; i++) {
+//            array3[i] = i;
+//        }
+//        int key2 = 5001;
+//        int low2 = 0;
+//        int high2 = array3.length - 1;
+//
+//        System.out.println("\nThe index of the key " + key2 + " in the array " + Arrays.toString(array3) + " is: " + binarySearch(array3, key2, low2, high2) + "\n");
+//
+//        int[] array4 = {36, 41, 27, 12, 31, 17, 5};
+//        int low3 = 0;
+//        int high3 = array4.length - 1;
+//
+//        System.out.println("\nQuick Sort on array " + Arrays.toString(array4) + " :\n");
+//        quickSort(array4, low3, high3);
+//        System.out.println("\nQuick Sort complete!\n");
+//
+//        int[] array5 = {36, 14, 27, 12, 31, 17, 5};
+//        int low4 = 0;
+//        int high4 = array5.length - 1;
+//
+//        System.out.println("\nMerge Sort on array " + Arrays.toString(array5) + ":\n");
+//        mergeSort(array5, low4, high4);
+//        System.out.println("\nMerge Sort complete!\n");
+//
+//        int[] array6 = {36, 14, 27, 12, 31, 17, 5};
+//
+//        System.out.println("\nRadix Sort on array " + Arrays.toString(array6) + ":\n");
+//        radixSort(array6);
+//        System.out.println("\nRadix Sort complete!\n");
+//
+//        int[] array7 = {36, 14, 27, 12, 31, 17, 5};
+//
+//        System.out.println("\nShell Sort on array " + Arrays.toString(array7) + ":\n");
+//        shellSort(array7);
+//        System.out.println("\nShell Sort complete!\n");
+//
+//        // compare runtime of insertion sort, merge sort, and quick sort
+//
+//        // array of 1,000 elements
+//        int[] array = new int[1000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        int[] array2 = new int[1000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        int[] array3 = new int[1000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("\nArray of 1,000 elements:");
+//
+//        long startTime = System.nanoTime();
+//        insertionSort(array);
+//        long endTime = System.nanoTime();
+//        long duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 10,000 elements
+//        array = new int[10000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[10000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[10000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 10,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 50,000 elements
+//        array = new int[50000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[50000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[50000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 50,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 100,000 elements
+//        array = new int[100000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[100000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[100000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 100,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 150,000 elements
+//        array = new int[150000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[150000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[150000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 150,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 200,000 elements
+//        array = new int[200000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[200000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[200000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 200,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 250,000 elements
+//        array = new int[250000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[250000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[250000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 250,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+//
+//        // array of 300,000 elements
+//        array = new int[300000];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = (int) (Math.random() * 1000);
+//        }
+//        array2 = new int[300000];
+//        System.arraycopy(array, 0, array2, 0, array.length);
+//        array3 = new int[300000];
+//        System.arraycopy(array, 0, array3, 0, array.length);
+//        System.out.println("Array of 300,000 elements:");
+//
+//        startTime = System.nanoTime();
+//        insertionSort(array);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Insertion Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        mergeSort(array2, 0, array2.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Merge Sort runtime: " + duration + " nanoseconds");
+//
+//        startTime = System.nanoTime();
+//        quickSort(array3, 0, array3.length - 1);
+//        endTime = System.nanoTime();
+//        duration = (endTime - startTime);
+//        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
     }
 }
