@@ -502,5 +502,14 @@ public class Sorting {
 //        endTime = System.nanoTime();
 //        duration = (endTime - startTime);
 //        System.out.println("Quick Sort runtime: " + duration + " nanoseconds\n");
+
+        int[] array = {12, 8, 32, 19, 92, 89, 90, 45, 67, 55, 72};
+        int pivot = 72;
+
+        System.out.println(partition(array, low, high, pivot));
+        System.out.println(Arrays.toString(array));
+        System.out.println(partition(array, low, high, pivot));
+        System.out.println(Arrays.toString(array));
+
     }
 }
